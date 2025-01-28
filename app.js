@@ -1,21 +1,27 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const reklamaFlex = document.querySelector(".reklama-flex");
-  const reklamaItems = reklamaFlex.innerHTML;
+  const adFlex = document.querySelector(".ad-flex");
+  const adItems = adFlex.innerHTML;
   
-  reklamaFlex.innerHTML += reklamaItems; 
+  adFlex.innerHTML += adItems; 
 
-  reklamaFlex.style.whiteSpace = "nowrap"; 
-  reklamaFlex.style.overflow = "hidden"; 
+  adFlex.style.whiteSpace = "nowrap"; 
+  adFlex.style.overflow = "hidden"; 
 
   let scrollAmount = 0;
-  function scrollReklama() {
+  function scrollAd() {
     scrollAmount -= 2;
-    if (scrollAmount <= -reklamaFlex.scrollWidth / 2) {
+    if (scrollAmount <= -adFlex.scrollWidth / 2) {
       scrollAmount = 0;
     }
-    reklamaFlex.style.transform = `translateX(${scrollAmount}px)`;
-    requestAnimationFrame(scrollReklama);
+    adFlex.style.transform = `translateX(${scrollAmount}px)`;
+    requestAnimationFrame(scrollAd);
   }
 
-  scrollReklama();
+  scrollAd();
+
+  // Add event listener to the up-button
+  const upButton = document.querySelector(".up-button");
+  upButton.addEventListener("click", function () {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
 });

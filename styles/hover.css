@@ -1,4 +1,3 @@
-/* Navbar button hover */
 nav button:hover {
   background-color: #743deb;
 }
@@ -8,7 +7,6 @@ nav button:hover i {
   color: #743deb;
 }
 
-/* Solid-rounded hover */
 .solid-rounded:hover i {
   color: #000724;
 }
@@ -21,12 +19,6 @@ nav button:hover i {
   background-color: #09c4e9;
 }
 
-/* Price card hover */
-.price-card:hover {
-  border: 1px solid #09c4e9;
-}
-
-/* Price button hover */
 .price button:hover {
   background-color: #743deb;
 }
@@ -36,7 +28,6 @@ nav button:hover i {
   color: #743deb;
 }
 
-/* Navbar link hover */
 nav a:hover {
   color: #743deb;
   text-decoration: underline;
